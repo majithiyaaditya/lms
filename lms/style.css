@@ -1,0 +1,211 @@
+/* Modern Login/Register Page CSS - Inspired by your reference image */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background: #f5f6fa;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Card Container --- */
+.login-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    min-height: 420px;
+}
+
+/* --- Illustration Section --- */
+.login-illustration {
+    background: #f5f6fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-width: 260px;
+    padding: 32px 0;
+}
+.login-illustration img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* --- Form Section --- */
+.login-form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 36px 32px 36px;
+}
+
+.login-form-section h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Form Styles --- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    border: 1.2px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.input-group input:focus {
+    border-color: #3a7afe;
+    background: #fff;
+}
+.input-group .input-icon {
+    position: absolute;
+    right: 12px;
+    color: #b0b8c9;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+/* --- Remember Me and Links --- */
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.login-options label {
+    font-size: 0.97rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Submit Button --- */
+.login-form button, .login-form input[type="submit"] {
+    background: #3a7afe;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.07);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.login-form button:hover, .login-form input[type="submit"]:hover {
+    background: #265ecf;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.13);
+}
+
+/* --- Social Login Buttons --- */
+.social-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: #f1f3f7;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+}
+.social-btn.facebook { background: #3b5998; }
+.social-btn.twitter { background: #1da1f2; }
+.social-btn.google { background: #db4437; }
+.social-btn:hover { filter: brightness(1.1); }
+
+/* --- Create Account Link --- */
+.create-account-link {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: #222;
+    font-size: 0.98rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.create-account-link:hover { color: #3a7afe; }
+
+/* --- Responsive Design --- */
+@media (max-width: 800px) {
+    .login-card {
+        flex-direction: column;
+        max-width: 95vw;
+        min-height: unset;
+    }
+    .login-illustration {
+        width: 100%;
+        justify-content: center;
+        padding: 24px 0 0 0;
+    }
+    .login-form-section {
+        padding: 28px 12vw 24px 12vw;
+    }
+}
+@media (max-width: 500px) {
+    .login-form-section {
+        padding: 18px 4vw 12px 4vw;
+    }
+    .login-card {
+        border-radius: 0;
+    }
+}
+
+.success-message {
+  color: #218838 !important;
+  background: #e6ffed;
+  border-left: 4px solid #218838;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: 0 0 8px 0;
+  font-size: 0.97rem;
+}
+.error-message {
+  color: #d32f2f !important;
+  background: #fff3f3;
+  border-left: 4px solid #d32f2f;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: 0 0 8px 0;
+  font-size: 0.97rem;
+} 
